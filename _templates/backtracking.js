@@ -4,9 +4,21 @@ function main() {
   var testCases = nextInt();
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    var cmd = next();
+    print("Case #" + testCase + ":");
+    var n = nextInt();
+    var j = nextInt();
 
-    print("Case #" + testCase + ": " + cmd);
+    var current = [];
+    for (let i = 0; i < n - 2; i++) {
+      current[i] = "+";
+    }
+
+    // we need object to pass by reference
+    var data = {
+      counter: 0,
+      k: -1
+    };
+    backtrack(current, data, j);
   }
 }
 

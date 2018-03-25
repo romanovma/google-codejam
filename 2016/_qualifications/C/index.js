@@ -8,7 +8,6 @@ function main() {
     var n = nextInt();
     var j = nextInt();
 
-    // var counter = 0;
     var current = [];
     for (let i = 0; i < n - 2; i++) {
       current[i] = "+";
