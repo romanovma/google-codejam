@@ -1,21 +1,23 @@
 // node index.js < A-small.in > A-small.out
 
-// complexity is bad one :)
+// time: O(D*P)
+// space: O(D)
 function main() {
   var testCases = nextInt();
+  var platesNum, plates, max, res, localRes;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    var platesNum = nextInt();
-    var plates = [];
-    for (let i = 0; i < platesNum; i++) {
+    platesNum = nextInt();
+    plates = [];
+    for (var i = 0; i < platesNum; i++) {
       plates.push(nextInt());
     }
     plates = plates.sort((a, b) => b - a);
-    var max = plates[0];
-    var res = max;
+    max = plates[0];
+    res = max;
 
-    for (let i = 1; i < max; i++) {
-      var localRes = 0;
+    for (var i = 1; i < max; i++) {
+      localRes = 0;
       plates.map(pcs => (localRes += Math.ceil(pcs / i) - 1));
       res = res <= localRes + i ? res : localRes + i;
     }
@@ -55,11 +57,11 @@ function print(data) {
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 
-process.stdin.on("data", function(chunk) {
+process.stdin.on("data", function (chunk) {
   inputBuffer += chunk;
 });
 
-process.stdin.on("end", function() {
+process.stdin.on("end", function () {
   inputBuffer = inputBuffer.split(/[\s]+/);
   main();
 });

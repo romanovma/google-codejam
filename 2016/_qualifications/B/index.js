@@ -1,14 +1,16 @@
 // node index.js < A-small.in > A-small.out
 
-// O(s)
+// time: O(s)
+// space: O(s)
 function main() {
   var testCases = nextInt();
+  var pcs, count, last;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    var pcs = next().split("");
+    pcs = next().split("");
 
-    var count = 0;
-    var last = "+";
+    count = 0;
+    last = "+";
 
     pcs
       .slice(0, pcs.lastIndexOf("-") + 1)
@@ -55,11 +57,11 @@ function print(data) {
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 
-process.stdin.on("data", function(chunk) {
+process.stdin.on("data", function (chunk) {
   inputBuffer += chunk;
 });
 
-process.stdin.on("end", function() {
+process.stdin.on("end", function () {
   inputBuffer = inputBuffer.split(/[\s]+/);
   main();
 });

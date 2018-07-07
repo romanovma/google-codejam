@@ -1,26 +1,30 @@
 // node index.js < A-small.in > A-small.out
 
+// time: O(1)
+// space: O
+
 function main() {
   var testCases = nextInt();
+  var n, digits, res, counter, num, numStr;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    var n = nextInt();
-    var digits = [];
-    var res = "INSOMNIA";
+    n = nextInt();
+    digits = [];
+    res = "INSOMNIA";
 
     if (n !== 0) {
-      for (let i = 0; i < 10; i++) {
+      for (var i = 0; i < 10; i++) {
         digits[i] = false;
       }
 
-      var counter = 0;
+      counter = 0;
 
       while (digits.indexOf(false) > -1) {
         counter++;
-        var num = counter * n;
-        var numStr = num.toString();
+        num = counter * n;
+        numStr = num.toString();
 
-        for (let i = 0; i < numStr.length; i++) {
+        for (var i = 0; i < numStr.length; i++) {
           digits[parseInt(numStr[i])] = true;
         }
       }
@@ -63,11 +67,11 @@ function print(data) {
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 
-process.stdin.on("data", function(chunk) {
+process.stdin.on("data", function (chunk) {
   inputBuffer += chunk;
 });
 
-process.stdin.on("end", function() {
+process.stdin.on("end", function () {
   inputBuffer = inputBuffer.split(/[\s]+/);
   main();
 });

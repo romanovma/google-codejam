@@ -1,18 +1,20 @@
 // node index.js < A-small.in > A-small.out
 
-// O(n)
+// time: O(S)
+// space: O(S)
 function main() {
   var testCases = nextInt();
+  var smax, ppl, cur, res;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    var smax = nextInt();
-    var ppl = next()
+    smax = nextInt();
+    ppl = next()
       .split("")
       .map(el => parseInt(el));
-    var cur = ppl[0];
-    var res = 0;
+    cur = ppl[0];
+    res = 0;
 
-    for (let i = 1; i < ppl.length; i++) {
+    for (var i = 1; i < ppl.length; i++) {
       if (cur < i) {
         res += i - cur;
         cur += i - cur;
@@ -55,11 +57,11 @@ function print(data) {
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 
-process.stdin.on("data", function(chunk) {
+process.stdin.on("data", function (chunk) {
   inputBuffer += chunk;
 });
 
-process.stdin.on("end", function() {
+process.stdin.on("end", function () {
   inputBuffer = inputBuffer.split(/[\s]+/);
   main();
 });

@@ -1,20 +1,22 @@
 // node index.js < A-small.in > A-small.out
 
-// O(n)
+// time: O(s)
+// space: O(s)
 function main() {
   var testCases = nextInt();
+  var cmd, k, flips, memo, res;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    var cmd = next();
-    var k = nextInt();
-    var flips = 0;
-    var memo = [];
-    var res = 0;
+    cmd = next();
+    k = nextInt();
+    flips = 0;
+    memo = [];
+    res = 0;
 
     // greedy algorithm
     pancakes = cmd.split("");
 
-    for (let i = 0; i < pancakes.length; i++) {
+    for (var i = 0; i < pancakes.length; i++) {
       if (memo[i]) {
         flips--;
       }
@@ -74,11 +76,11 @@ function print(data) {
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 
-process.stdin.on("data", function(chunk) {
+process.stdin.on("data", function (chunk) {
   inputBuffer += chunk;
 });
 
-process.stdin.on("end", function() {
+process.stdin.on("end", function () {
   inputBuffer = inputBuffer.split(/[\s]+/);
   main();
 });

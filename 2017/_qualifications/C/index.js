@@ -4,17 +4,17 @@
 // this doesn't work on large dataset: Number.MAX_SAFE_INTEGER === 9007199254740991
 function main() {
   var testCases = nextInt();
+  var n, k, count, set, i, x, x1, x2;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    var n = nextInt();
-    var k = nextInt();
+    n = nextInt();
+    k = nextInt();
 
-    var count = [];
+    count = [];
     count[n] = 1;
 
-    var set = new Set([n]);
-    var i = 0;
-    var x, x1, x2;
+    set = new Set([n]);
+    i = 0;
 
     while (i < k) {
       x = Math.max(...set);
@@ -67,11 +67,11 @@ function print(data) {
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 
-process.stdin.on("data", function(chunk) {
+process.stdin.on("data", function (chunk) {
   inputBuffer += chunk;
 });
 
-process.stdin.on("end", function() {
+process.stdin.on("end", function () {
   inputBuffer = inputBuffer.split(/[\s]+/);
   main();
 });

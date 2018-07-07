@@ -1,20 +1,24 @@
 // node index.js < A-small.in > A-small.out
 
+// time: O(j)
+// space: O(n)
+
 function main() {
   var testCases = nextInt();
+  var n, j, current, data;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
     print("Case #" + testCase + ":");
-    var n = nextInt();
-    var j = nextInt();
+    n = nextInt();
+    j = nextInt();
 
-    var current = [];
-    for (let i = 0; i < n - 2; i++) {
+    current = [];
+    for (var i = 0; i < n - 2; i++) {
       current[i] = "+";
     }
 
     // we need object to pass by reference
-    var data = {
+    data = {
       counter: 0,
       k: -1
     };
@@ -106,11 +110,11 @@ function print(data) {
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 
-process.stdin.on("data", function(chunk) {
+process.stdin.on("data", function (chunk) {
   inputBuffer += chunk;
 });
 
-process.stdin.on("end", function() {
+process.stdin.on("end", function () {
   inputBuffer = inputBuffer.split(/[\s]+/);
   main();
 });
