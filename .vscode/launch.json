@@ -10,8 +10,7 @@
       "name": "Launch Program",
       "program": "${file}",
       "console": "integratedTerminal",
-      "args": ["<", "B-small-practice.in", ">", "B-small.out"],
-      "cwd": "${workspaceFolder}/2015/_qualifications/B"
+      "cwd": "${workspaceFolder}/2018/_qualification/A"
     }
   ]
 }
