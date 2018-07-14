@@ -1,31 +1,23 @@
-// node index.js < D-small-practice.in > D-small-practice.out
-// node index.js < D-large-practice.in > D-large-practice.out
+// node index.js < B-small-practice.in > B-small-practice.out
+// node index.js < B-large-practice.in > B-large-practice.out
 
 // time: O(1)
 // space: O(1)
 function main() {
   var testCases = nextInt();
-  var X, R, C, MINS, MAXS, res;
-  var GABRIEL = "GABRIEL";
-  var RICHARD = "RICHARD";
+  var C, F, X, n, res;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    X = nextInt();
-    R = nextInt();
-    C = nextInt();
-    res = GABRIEL;
+    C = +next();
+    F = +next();
+    X = +next();
 
-    MINS = Math.min(R, C);
-    MAXS = Math.max(R, C);
+    n = Math.max(0, Math.floor(X / C - 2 / F));
 
-    if (
-      (MINS * MAXS) % X !== 0 ||
-      (X === 3 && MINS === 1) ||
-      (X === 4 && MINS <= 2) ||
-      (X === 5 && (MINS <= 2 || MINS === 3 && MAXS === 5)) ||
-      (X === 6 && MINS <= 3) ||
-      (X >= 7)) {
-      res = RICHARD;
+    res = X / (2 + n * F);
+
+    for (var i = 0; i < n; i++) {
+      res += C / (2 + i * F);
     }
 
     print("Case #" + testCase + ": " + res);

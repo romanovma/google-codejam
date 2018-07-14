@@ -1,31 +1,40 @@
-// node index.js < D-small-practice.in > D-small-practice.out
-// node index.js < D-large-practice.in > D-large-practice.out
+// node index.js < A-small-practice.in > A-small-practice.out
 
 // time: O(1)
 // space: O(1)
 function main() {
   var testCases = nextInt();
-  var X, R, C, MINS, MAXS, res;
-  var GABRIEL = "GABRIEL";
-  var RICHARD = "RICHARD";
+  var A1, ARR1, A2, ARR2, card, res, count;
+  var MAG = "Bad magician!";
+  var VOL = "Volunteer cheated!";
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    X = nextInt();
-    R = nextInt();
-    C = nextInt();
-    res = GABRIEL;
+    count = 0;
+    A1 = nextInt() - 1;
+    ARR1 = [];
+    for (var i = 0; i < 16; i++) {
+      card = next();
+      if (i >= A1 * 4 && i < (A1 + 1) * 4) {
+        ARR1.push(card);
+      }
+    }
 
-    MINS = Math.min(R, C);
-    MAXS = Math.max(R, C);
+    A2 = nextInt() - 1;
+    ARR2 = [];
+    for (var i = 0; i < 16; i++) {
+      card = next();
+      if (i >= A2 * 4 && i < (A2 + 1) * 4) {
+        if (ARR1.indexOf(card) > -1) {
+          count++;
+          res = card;
+        }
+      }
+    }
 
-    if (
-      (MINS * MAXS) % X !== 0 ||
-      (X === 3 && MINS === 1) ||
-      (X === 4 && MINS <= 2) ||
-      (X === 5 && (MINS <= 2 || MINS === 3 && MAXS === 5)) ||
-      (X === 6 && MINS <= 3) ||
-      (X >= 7)) {
-      res = RICHARD;
+    if (count === 0) {
+      res = VOL;
+    } else if (count > 1) {
+      res = MAG;
     }
 
     print("Case #" + testCase + ": " + res);

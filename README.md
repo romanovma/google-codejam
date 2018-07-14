@@ -51,4 +51,14 @@ Node JS solutions of Google Code Jam.
 |A| [Standing Ovation](https://codejam.withgoogle.com/codejam/contest/6224486/dashboard#s=p0)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2015/_qualifications/A)| _O(1)_ | _O(1)_ | Easy | | Greedy |
 |B| [Infinite House of Pancakes](https://codejam.withgoogle.com/codejam/contest/6224486/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2015/_qualifications/B)| _O(D*P)_ | _O(D)_ | Easy | | |
 |C| [Dijkstra](https://code.google.com/codejam/contest/6224486/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2015/_qualifications/C)| _O(L)_ | _O(L)_ | Medium | | Greedy |
-|D| [Ominous Omino](https://code.google.com/codejam/contest/6224486/dashboard#s=p3)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2015/_qualifications/C) | _O(1)_ | _O(1)_ | Medium | | Misc |
+|D| [Ominous Omino](https://code.google.com/codejam/contest/6224486/dashboard#s=p3)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2015/_qualifications/D) | _O(1)_ | _O(1)_ | Medium | | Misc |
+
+## 2014
+
+### Qualification Round
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
+|A| [Magic Trick](https://codejam.withgoogle.com/codejam/contest/2974486/dashboard#s=p0)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/A)| _O(1)_ | _O(1)_ | Easy | | |
+|B| [Cookie Clicker Alpha](https://codejam.withgoogle.com/codejam/contest/2974486/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/B)| _O(X/C)_ | _O(1)_ | Easy | | Greedy, Math |
+|C| [Minesweeper Master](https://code.google.com/codejam/contest/2974486/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/C)| _O(R * C)_ | _O(R * C)_ | Hard | | Analysis |
+|D| [Deceitful War](https://code.google.com/codejam/contest/2974486/dashboard#s=p3)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/D) | _O(NlogN)_ | _O(N)_ | Easy | | Greedy |

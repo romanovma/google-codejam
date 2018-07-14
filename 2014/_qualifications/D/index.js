@@ -5,30 +5,50 @@
 // space: O(1)
 function main() {
   var testCases = nextInt();
-  var X, R, C, MINS, MAXS, res;
-  var GABRIEL = "GABRIEL";
-  var RICHARD = "RICHARD";
+  var R, naomi, ken, war, dwar, kCounter, nCounter;
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
-    X = nextInt();
-    R = nextInt();
-    C = nextInt();
-    res = GABRIEL;
+    N = nextInt();
 
-    MINS = Math.min(R, C);
-    MAXS = Math.max(R, C);
+    naomi = [];
+    for (var i = 0; i < N; i++) {
+      naomi.push(+next());
+    }
+    naomi = naomi.sort((a, b) => a - b);
 
-    if (
-      (MINS * MAXS) % X !== 0 ||
-      (X === 3 && MINS === 1) ||
-      (X === 4 && MINS <= 2) ||
-      (X === 5 && (MINS <= 2 || MINS === 3 && MAXS === 5)) ||
-      (X === 6 && MINS <= 3) ||
-      (X >= 7)) {
-      res = RICHARD;
+    ken = [];
+    for (var i = 0; i < N; i++) {
+      ken.push(+next());
+    }
+    ken = ken.sort((a, b) => a - b);
+
+    // count War
+    war = N;
+    kCounter = 0;
+    for (var i = 0; i < N; i++) {
+      for (j = kCounter; j < N; j++) {
+        if (ken[j] > naomi[i]) {
+          kCounter = j + 1;
+          war--;
+          break;
+        }
+      }
     }
 
-    print("Case #" + testCase + ": " + res);
+    // count Deceitful War
+    dwar = 0;
+    nCounter = 0;
+    for (var i = 0; i < N; i++) {
+      for (j = nCounter; j < N; j++) {
+        if (naomi[j] > ken[i]) {
+          nCounter = j + 1;
+          dwar++;
+          break;
+        }
+      }
+    }
+
+    print("Case #" + testCase + ": " + dwar + ' ' + war);
   }
 }
 
