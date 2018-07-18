@@ -60,5 +60,15 @@ Node JS solutions of Google Code Jam.
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
 |A| [Magic Trick](https://codejam.withgoogle.com/codejam/contest/2974486/dashboard#s=p0)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/A)| _O(1)_ | _O(1)_ | Easy | | |
 |B| [Cookie Clicker Alpha](https://codejam.withgoogle.com/codejam/contest/2974486/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/B)| _O(X/C)_ | _O(1)_ | Easy | | Greedy, Math |
-|C| [Minesweeper Master](https://code.google.com/codejam/contest/2974486/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/C)| _O(R * C)_ | _O(R * C)_ | Hard | | Analysis |
+|C| [Minesweeper Master](https://code.google.com/codejam/contest/2974486/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/C)| _O(R*C)_ | _O(R*C)_ | Hard | | Analysis |
 |D| [Deceitful War](https://code.google.com/codejam/contest/2974486/dashboard#s=p3)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2014/_qualifications/D) | _O(NlogN)_ | _O(N)_ | Easy | | Greedy |
+
+## 2013
+
+### Qualification Round
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
+|A| [Tic-Tac-Toe-Tomek](https://codejam.withgoogle.com/codejam/contest/2270488/dashboard#s=p0)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/A)| _O(1)_ | _O(1)_ | Easy | | Brute force |
+|B| [Lawnmower](https://codejam.withgoogle.com/codejam/contest/2270488/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/B)| _O(N*M*(N+M))_ | _O(N*M)_ | Easy | | Brute force |
+|C| [Fair and Square](https://code.google.com/codejam/contest/2270488/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/C)| _O(R * C)_ | _O(R * C)_ | Hard | | Math |
+|D| [Treasure](https://code.google.com/codejam/contest/2270488/dashboard#s=p3)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/D) | _O(NlogN)_ | _O(N)_ | Easy | | Greedy |
