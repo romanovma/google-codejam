@@ -2,42 +2,45 @@
 // node index.js < C-large-practice-1.in > C-large-practice-1.out
 // node index.js < C-large-practice-2.in > C-large-practice-2.out
 
-
-// time: O(1)
-// space: O(1)
+// time: O(2^(Log10(B)))
+// space: O(2^(Log10(B)))
 function main() {
   var testCases = nextInt();
-  var A, B, pldrms, res, high, cand, bins3, bins1, sumDigits, pad, bins, count;
+  var A, B, pldrms, sumDigits, pad, bins, count;
   var MAX = 7;
-  pldrms = ["1", "2", "3", "11", "22", "101", "111", "121", "202", "212"];
-  res = [];
-  high = Math.pow(2, MAX);
-  bins = [];
-  // bins3 = [];
-  // bins1 = [];
-
-  for (var i = 0; i < high; i++) {
-    cand = i.toString(2);
-    sumDigits = cand.split("").reduce((acc, val) => acc + parseInt(val), 0);
-
-    bins.push(cand);
+  var POW = 1;
+  for (var i = 0; i < MAX; i++) {
+    POW = POW * 2;
   }
 
-  // bins.map(b => print(b));
+  pldrms = ["1", "2", "3", "11", "22", "101", "111", "121", "202", "212"];
 
+  // prepare list of binary numbers
+  bins = [];
+  for (var i = 0; i < POW; i++) {
+    bins.push(i.toString(2));
+  }
+
+  // find all palindromes with 0,1,2,3 and squares of digits <=9
   for (var i = 1; i <= MAX - 1; i++) {
-    // print('i:  ' + i);
-    // find all palindromes with 0,1,2,3 and squares of digits <=9
-
-    // 1 on edges even
     pad = "";
     for (var j = 1; j < i; j++) {
       pad += "0"; // pad with leading zeros
     }
-    // print('pad:  ' + pad);
+
+    // 1 on edges even
     for (var j = 0; j < Math.pow(2, i); j++) {
       if (bins[j].split("").reduce((acc, val) => acc + parseInt(val), 0) <= 3) {
-        pldrms.push("1" + (pad + bins[j]).slice(-i) + (pad + bins[j]).slice(-i).split("").reverse().join("") + "1");
+        pldrms.push(
+          "1" +
+          (pad + bins[j]).slice(-i) +
+          (pad + bins[j])
+          .slice(-i)
+          .split("")
+          .reverse()
+          .join("") +
+          "1"
+        );
       }
     }
 
@@ -46,23 +49,58 @@ function main() {
 
     // 1 on edges odd
     for (var j = 0; j < Math.pow(2, i); j++) {
-      sumDigits = bins[j].split("").reduce((acc, val) => acc + parseInt(val), 0);
+      sumDigits = bins[j]
+        .split("")
+        .reduce((acc, val) => acc + parseInt(val), 0);
       if (sumDigits <= 3) {
-        pldrms.push("1" + (pad + bins[j]).slice(-i) + "0" + (pad + bins[j]).slice(-i).split("").reverse().join("") + "1");
-        pldrms.push("1" + (pad + bins[j]).slice(-i) + "1" + (pad + bins[j]).slice(-i).split("").reverse().join("") + "1");
+        pldrms.push(
+          "1" +
+          (pad + bins[j]).slice(-i) +
+          "0" +
+          (pad + bins[j])
+          .slice(-i)
+          .split("")
+          .reverse()
+          .join("") +
+          "1"
+        );
+        pldrms.push(
+          "1" +
+          (pad + bins[j]).slice(-i) +
+          "1" +
+          (pad + bins[j])
+          .slice(-i)
+          .split("")
+          .reverse()
+          .join("") +
+          "1"
+        );
       }
       if (sumDigits <= 1) {
-        pldrms.push("1" + (pad + bins[j]).slice(-i) + "2" + (pad + bins[j]).slice(-i).split("").reverse().join("") + "1");
+        pldrms.push(
+          "1" +
+          (pad + bins[j]).slice(-i) +
+          "2" +
+          (pad + bins[j])
+          .slice(-i)
+          .split("")
+          .reverse()
+          .join("") +
+          "1"
+        );
       }
     }
 
-    // 2 on edges - odd 
-    pldrms.push("2" + Array(i + 1).join("0") + "0" + Array(i + 1).join("0") + "2");
-    pldrms.push("2" + Array(i + 1).join("0") + "1" + Array(i + 1).join("0") + "2");
+    // 2 on edges - odd
+    pldrms.push(
+      "2" + Array(i + 1).join("0") + "0" + Array(i + 1).join("0") + "2"
+    );
+    pldrms.push(
+      "2" + Array(i + 1).join("0") + "1" + Array(i + 1).join("0") + "2"
+    );
   }
 
   pldrms = pldrms.map(pldrm => pow(pldrm));
-  // pldrms.map(pldrm => print(pldrm));
 
   for (var testCase = 1; testCase <= testCases; ++testCase) {
     A = next();
@@ -71,17 +109,13 @@ function main() {
 
     // go through the list of palindromes and count how much of them between A and B
     for (var i = 0; i < pldrms.length; i++) {
-      // print('p:  ' + pldrms[i]);
-      // print(compareStr(pldrms[i] + "", A) + ' ' + compareStr(B, pldrms[i] + "") + ' ' + count);
       if (!count) {
         if (compareStr(pldrms[i] + "", A) && compareStr(B, pldrms[i] + "")) {
-          // print('c1');
           count++;
         } else if (compareStr(pldrms[i] + "", B)) {
           break;
         }
       } else if (compareStr(B, pldrms[i] + "")) {
-        // print('c2');
         count++;
       } else {
         break;
@@ -105,13 +139,23 @@ function pow(str) {
       }
       res += dig;
     }
-    return res + res.slice(0, -1).split("").reverse().join("");
+    return (
+      res +
+      res
+      .slice(0, -1)
+      .split("")
+      .reverse()
+      .join("")
+    );
   }
-
 }
 
 function compareStr(str1, str2) {
-  return (str1.length > str2.length || str1 == str2 || str1.length === str2.length && str1 > str2) ? 1 : 0;
+  return str1.length > str2.length ||
+    str1 == str2 ||
+    (str1.length === str2.length && str1 > str2) ?
+    1 :
+    0;
 }
 
 // auxiliary code

@@ -70,5 +70,15 @@ Node JS solutions of Google Code Jam.
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
 |A| [Tic-Tac-Toe-Tomek](https://codejam.withgoogle.com/codejam/contest/2270488/dashboard#s=p0)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/A)| _O(1)_ | _O(1)_ | Easy | | Brute force |
 |B| [Lawnmower](https://codejam.withgoogle.com/codejam/contest/2270488/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/B)| _O(N*M*(N+M))_ | _O(N*M)_ | Easy | | Brute force |
-|C| [Fair and Square](https://code.google.com/codejam/contest/2270488/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/C)| _O(R * C)_ | _O(R * C)_ | Hard | | Math |
-|D| [Treasure](https://code.google.com/codejam/contest/2270488/dashboard#s=p3)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/D) | _O(NlogN)_ | _O(N)_ | Easy | | Greedy |
+|C| [Fair and Square](https://code.google.com/codejam/contest/2270488/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/C)| _O(2^(Log10(B)))_ | _O(2^(Log10(B)))_ | Very Hard | | Math |
+|D| [Treasure](https://code.google.com/codejam/contest/2270488/dashboard#s=p3)|  | |  |  | |  |
+
+## 2012
+
+### Qualification Round
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
+|A| [Speaking in Tongues](https://codejam.withgoogle.com/codejam/contest/1460488/dashboard#s=p0)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/A)| _O(1)_ | _O(1)_ | Easy | | |
+|B| [Dancing With the Googlers](https://codejam.withgoogle.com/codejam/contest/1460488/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/B)| _O(N)_ | _O(1)_ | Easy | |  |
+|C| [Recycled Numbers](https://code.google.com/codejam/contest/1460488/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/C)| _O(2^(Log10(B)))_ | _O(2^(Log10(B)))_ | Very Hard | | Math |
+|D| [Hall of Mirrors](https://code.google.com/codejam/contest/1460488/dashboard#s=p3)|  | |  |  | |  |
