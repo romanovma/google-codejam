@@ -82,3 +82,13 @@ Node JS solutions of Google Code Jam.
 |B| [Dancing With the Googlers](https://codejam.withgoogle.com/codejam/contest/1460488/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/B)| _O(N)_ | _O(1)_ | Easy | |  |
 |C| [Recycled Numbers](https://code.google.com/codejam/contest/1460488/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/C)| _O(2^(Log10(B)))_ | _O(2^(Log10(B)))_ | Very Hard | | Math |
 |D| [Hall of Mirrors](https://code.google.com/codejam/contest/1460488/dashboard#s=p3)|  | |  |  | |  |
+
+## 2011
+
+### Qualification Round
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
+|A| [Bot Trust](https://codejam.withgoogle.com/codejam/contest/975485/dashboard#s=p0)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/A)| _O(N)_ | _O(1)_ | Easy | | Greedy |
+|B| [Magicka](https://codejam.withgoogle.com/codejam/contest/975485/dashboard#s=p1)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/B)| _O(N*D)_ | _O(N+D+C)_ | Easy | |  |
+|C| [Candy Splitting](https://code.google.com/codejam/contest/975485/dashboard#s=p2)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/C)| _O(N)_ | _O(N)_ | Easy | | Math |
+|D| [GoroSort](https://code.google.com/codejam/contest/975485/dashboard#s=p3)| [Node JS](https://github.com/romanovma/google-codejam/tree/master/2013/_qualifications/D) | _O(NlogN)_ | _O(N)_ | Very Hard | | Probability |
